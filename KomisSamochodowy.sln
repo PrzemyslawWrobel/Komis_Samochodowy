@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.1022
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KomisSamochodowy", "KomisSamochodowy\KomisSamochodowy.csproj", "{4E38C926-A2D8-40E6-8009-7D5CB16BBA39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KomisSamochodowy", "KomisSamochodowy\KomisSamochodowy.csproj", "{4E38C926-A2D8-40E6-8009-7D5CB16BBA39}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{764F0AC7-8EEE-43E4-8E7E-CDCB3A754BE1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
