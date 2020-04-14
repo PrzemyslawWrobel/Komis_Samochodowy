@@ -8,6 +8,6 @@ namespace KomisSamochodowy.Models
     public interface ISamochodRepository
     {
         IEnumerable<Samochod> PobierzWszystkieSamochody();
-        Samochod PobierzSamochodOId();
+        Samochod PobierzSamochodOId(int samochodId);
     }
 }
