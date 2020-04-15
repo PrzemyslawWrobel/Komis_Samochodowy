@@ -36,7 +36,12 @@ namespace KomisSamochodowy
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
-            app.UseMvcWithDefaultRoute();
+            app.UseMvc(routs =>
+            {
+                routs.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?KD}");
+            });
 
             //if (env.IsDevelopment())
             //{
