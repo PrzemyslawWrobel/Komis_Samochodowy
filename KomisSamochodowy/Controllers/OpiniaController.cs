@@ -14,7 +14,22 @@ namespace KomisSamochodowy.Controllers
         {
             _opiniaRepository = opiniaRepository;
         }
+
+        [HttpGet]
         public IActionResult Index()
+        {
+            return View();
+        }
+        
+        [HttpPost]
+        public IActionResult Index(Opinia opinia)
+        {
+            _opiniaRepository.DodjOpinie(opinia);
+
+            return RedirectToAction("OpiniaWyslana");
+        }
+
+        public IActionResult OpiniaWyslana()
         {
             return View();
         }
