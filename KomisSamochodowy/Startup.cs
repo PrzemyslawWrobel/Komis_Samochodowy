@@ -26,6 +26,7 @@ namespace KomisSamochodowy
         {
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddTransient<ISamochodRepository, SamochodRepository>();
+            services.AddTransient<IOpiniaRepository, OpiniaRepository>();
             services.AddMvc();
         }
 
@@ -40,7 +41,7 @@ namespace KomisSamochodowy
             {
                 routs.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?KD}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
 
             //if (env.IsDevelopment())
