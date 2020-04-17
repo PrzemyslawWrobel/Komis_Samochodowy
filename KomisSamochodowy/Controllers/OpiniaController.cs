@@ -20,13 +20,16 @@ namespace KomisSamochodowy.Controllers
         {
             return View();
         }
-        
+
         [HttpPost]
         public IActionResult Index(Opinia opinia)
         {
-            _opiniaRepository.DodjOpinie(opinia);
-
-            return RedirectToAction("OpiniaWyslana");
+            if (ModelState.IsValid)
+            {
+                _opiniaRepository.DodjOpinie(opinia);
+                return RedirectToAction("OpiniaWyslana");
+            }
+            return View(opinia);
         }
 
         public IActionResult OpiniaWyslana()
