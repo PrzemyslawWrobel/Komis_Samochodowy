@@ -32,8 +32,6 @@ namespace KomisSamochodowy.Migrations
 
                     b.Property<bool>("JestWCentrali");
 
-                    b.Property<bool>("JestWcentrali");
-
                     b.Property<string>("Marka");
 
                     b.Property<string>("MiniaturkaUrl");

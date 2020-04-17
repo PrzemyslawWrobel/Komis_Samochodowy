@@ -21,6 +21,6 @@ namespace KomisSamochodowy.Models
         public string MiniaturkaUrl { get; set; }
         public bool JestSamochodemTygodnia { get; set; }
         public bool JestWCentrali { get; set; }
-        public bool JestWcentrali { get; set; }
+      
     }
 }
