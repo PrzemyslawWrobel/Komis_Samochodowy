@@ -47,5 +47,35 @@ namespace KomisSamochodowy.Controllers
 
             return View(loginVM);
         }
+
+        // GET: /<controller>/
+        public IActionResult Register()
+        {
+            return View(new LoginVM());
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Register(LoginVM loginVM)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = new IdentityUser() { UserName = loginVM.UserName };
+                var result = await _userManager.CreateAsync(user, loginVM.Password);
+
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+            }
+
+            return View(loginVM);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
+        }
     }
 }
