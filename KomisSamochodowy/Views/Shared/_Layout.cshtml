@@ -17,7 +17,7 @@
                     <li><a asp-controller="Opinia" asp-action="Index">Opinia</a></li>
                 </ul>
 
-                @*@if (SignInManager.IsSignedIn(User))
+                @if (SignInManager.IsSignedIn(User))
                 {
                     <form asp-area="" asp-controller="Account" asp-action="Logout" id="logoutForm"
                           method="post" class="navbar-right">
@@ -32,7 +32,7 @@
                         <li><a id="registerLink" asp-controller="Account" asp-action="Register">Rejestracja</a></li>
                         <li><a id="loginLink" asp-controller="Account" asp-action="Login">Logowanie</a></li>
                     </ul>
-                }*@
+                }
 
             </div>
         </div>
