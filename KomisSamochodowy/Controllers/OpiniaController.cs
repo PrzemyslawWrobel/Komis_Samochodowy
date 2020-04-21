@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using KomisSamochodowy.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KomisSamochodowy.Controllers
 {
+    [Authorize]
     public class OpiniaController : Controller
     {
         private readonly IOpiniaRepository _opiniaRepository;
